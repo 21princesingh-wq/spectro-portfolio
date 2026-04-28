@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reflectance Spectrophotometer | Spectrum Analyzer with Deep Learning</title>
+<meta name="description" content="B.E. Project Portfolio — Reflectance Spectrophotometer Spectrum Analyzer with Deep Learning. R. H. Sapat College of Engineering, Nashik. 2025–26.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ NAVIGATION ═══ -->
+<nav id="navbar">
+  <div class="nav-logo">Spec<span>tro</span>·AI</div>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('intro')">Introduction</a></li>
+    <li><a href="#" onclick="showPage('related')">Related Work</a></li>
+    <li><a href="#" onclick="showPage('objectives')">Objectives</a></li>
+    <li><a href="#" onclick="showPage('outcomes')">Outcomes</a></li>
+    <li><a href="#" onclick="showPage('results')">Results</a></li>
+    <li><a href="#" onclick="showPage('future')">Future Scope</a></li>
+    <li><a href="#" onclick="showPage('conclusion')">Conclusion</a></li>
+    <li><a href="#" onclick="showPage('contact')" class="nav-cta">Contact</a></li>
+  </ul>
+  <div class="burger" onclick="toggleMobile()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#" onclick="showPage('home')">Home</a>
+  <a href="#" onclick="showPage('intro')">Introduction</a>
+  <a href="#" onclick="showPage('related')">Related Work</a>
+  <a href="#" onclick="showPage('objectives')">Objectives</a>
+  <a href="#" onclick="showPage('outcomes')">Outcomes</a>
+  <a href="#" onclick="showPage('results')">Results</a>
+  <a href="#" onclick="showPage('future')">Future Scope</a>
+  <a href="#" onclick="showPage('conclusion')">Conclusion</a>
+  <a href="#" onclick="showPage('contact')">Contact</a>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PAGE 1 — HOME
+══════════════════════════════════════ -->
+<div id="home" class="page active">
+
+  <div class="ticker-wrap" style="margin-top:64px">
+    <div class="ticker">
+      <span class="ticker-item">Reflectance Spectrophotometer</span>
+      <span class="ticker-item">Deep Learning Classification</span>
+      <span class="ticker-item">RGB to Wavelength Mapping</span>
+      <span class="ticker-item">Non-Destructive Testing</span>
+      <span class="ticker-item">Material Identification</span>
+      <span class="ticker-item">400nm – 700nm Spectrum</span>
+      <span class="ticker-item">Reflectance Spectrophotometer</span>
+      <span class="ticker-item">Deep Learning Classification</span>
+      <span class="ticker-item">RGB to Wavelength Mapping</span>
+      <span class="ticker-item">Non-Destructive Testing</span>
+      <span class="ticker-item">Material Identification</span>
+      <span class="ticker-item">400nm – 700nm Spectrum</span>
+    </div>
+  </div>
+
+  <div class="hero">
+    <!-- Left -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        B.E. Project · Electronics &amp; Telecomm · 2025–26
+      </div>
+      <h1 class="hero-title">
+        Reflectance<br><em>Spectro-</em><br>photometer
+      </h1>
+      <p class="hero-sub">A low-cost, portable spectrum analyzer integrating diffraction optics with deep learning for automated, non-destructive material classification — no chemicals required.</p>
+      <div class="hero-tags">
+        <span class="tag">Deep Learning</span>
+        <span class="tag">OpenCV</span>
+        <span class="tag">Arduino</span>
+        <span class="tag">Python</span>
+        <span class="tag">CNN / LSTM</span>
+        <span class="tag">Diffraction Grating</span>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="showPage('intro')">Explore Project</button>
+        <button class="btn-outline" onclick="showPage('results')">View Results</button>
+      </div>
+    </div>
+
+    <!-- Right (dark panel) -->
+    <div class="hero-right">
+      <div class="spectrum-viz">
+        <div style="font-family:'Space Mono',monospace;font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px;">Visible Light Spectrum</div>
+        <div class="spectrum-bar"></div>
+        <div class="spectrum-labels">
+          <span>400nm</span><span>450nm</span><span>500nm</span>
+          <span>550nm</span><span>600nm</span><span>650nm</span><span>700nm</span>
+        </div>
+        <div class="waveform">
+          <svg viewBox="0 0 420 120" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%"   stop-color="#4361ee"/>
+                <stop offset="20%"  stop-color="#06d6a0"/>
+                <stop offset="40%"  stop-color="#44cf6c"/>
+                <stop offset="60%"  stop-color="#ffd166"/>
+                <stop offset="80%"  stop-color="#ef9b20"/>
+                <stop offset="100%" stop-color="#e63946"/>
+              </linearGradient>
+            </defs>
+            <line x1="0" y1="110" x2="420" y2="110" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+            <line x1="0" y1="80"  x2="420" y2="80"  stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <line x1="0" y1="50"  x2="420" y2="50"  stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <path d="M0,105 C30,100 50,90 80,60 C100,38 120,25 150,20 C180,15 200,22 230,35 C260,50 290,65 320,75 C350,85 390,95 420,100"
+              fill="none" stroke="url(#wg)" stroke-width="2.5" opacity="0.9"/>
+            <path d="M0,110 C30,108 50,95 80,65 C100,42 120,28 150,24 C180,19 200,26 230,40 C260,55 290,70 320,80 C350,90 390,100 420,105 L420,110 Z"
+              fill="url(#wg)" opacity="0.1"/>
+            <circle cx="90"  cy="55" r="3" fill="#4361ee" opacity="0.8"/>
+            <circle cx="160" cy="20" r="3" fill="#44cf6c" opacity="0.8"/>
+            <circle cx="250" cy="38" r="3" fill="#ffd166" opacity="0.8"/>
+            <circle cx="350" cy="82" r="3" fill="#e63946" opacity="0.8"/>
+          </svg>
+        </div>
+      </div>
+      <div class="hero-stat-row">
+        <div class="hero-stat">
+          <span class="stat-num">400–700</span>
+          <span class="stat-lbl">nm Range</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">₹1,250</span>
+          <span class="stat-lbl">Total Cost</span>
+        </div>
+        <div class="hero-stat">
+          <span class="stat-num">14+</span>
+          <span class="stat-lbl">Papers Cited</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /home -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 2 — INTRODUCTION
+══════════════════════════════════════ -->
+<div id="intro" class="page">
+  <section>
+    <div class="section-label">01 · Introduction</div>
+    <h2 class="section-title">Why Build a<br>Spectrophotometer?</h2>
+
+    <div class="intro-grid">
+      <div class="intro-body">
+        <p>Conventional laboratory-grade spectrophotometers are essential tools for material analysis, but their high cost, large size, and non-portable nature significantly restrict their use in field applications, educational laboratories, and industrial quality control settings.</p>
+
+        <div class="intro-highlight">
+          <p>"Every material possesses a unique reflectance spectrum — a chemical and physical fingerprint that enables accurate, non-destructive identification."</p>
+        </div>
+
+        <p>This project proposes a low-cost, portable Reflectance Spectrophotometer using a common camera and diffraction grating to capture visible light spectra (400–700 nm). RGB pixel intensities are mapped mathematically to wavelengths, and a Deep Learning model classifies materials in real-time through a user-friendly GUI.</p>
+
+        <div class="system-flow" style="margin-top:40px;">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">System Pipeline</div>
+          <div class="flow-step"><span class="flow-num">01</span><div><h4>Light Source</h4><p>Stable LED illuminates the material sample</p></div></div>
+          <div class="flow-step"><span class="flow-num">02</span><div><h4>Diffraction Element</h4><p>Grating/prism disperses reflected light into spectrum</p></div></div>
+          <div class="flow-step"><span class="flow-num">03</span><div><h4>Camera Capture</h4><p>HD webcam captures the dispersed spectral image</p></div></div>
+          <div class="flow-step"><span class="flow-num">04</span><div><h4>RGB → Wavelength Mapping</h4><p>OpenCV processes image; pixel intensities mapped to 400–700nm</p></div></div>
+          <div class="flow-step"><span class="flow-num">05</span><div><h4>Deep Learning Classification</h4><p>CNN/NN classifies material from spectral signature</p></div></div>
+          <div class="flow-step"><span class="flow-num">06</span><div><h4>GUI Output</h4><p>Real-time spectrum visualization + material prediction</p></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="keywords-box">
+          <h4>Keywords</h4>
+          <div class="kw-list">
+            <span class="kw">Reflectance Spectrophotometer</span>
+            <span class="kw">Spectrum Analyzer</span>
+            <span class="kw">Deep Learning</span>
+            <span class="kw">Material Classification</span>
+            <span class="kw">RGB-to-Wavelength</span>
+            <span class="kw">Image Processing</span>
+            <span class="kw">Non-Destructive Testing</span>
+            <span class="kw">GUI</span>
+            <span class="kw">Diffraction Glass</span>
+            <span class="kw">Automation</span>
+            <span class="kw">OpenCV</span>
+            <span class="kw">CNN</span>
+            <span class="kw">Arduino</span>
+            <span class="kw">Python 3.x</span>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:28px;border:1px solid var(--border);">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Institution</div>
+          <h4 style="margin-bottom:8px;">R. H. Sapat College of Engineering</h4>
+          <p style="font-size:14px;color:var(--ink3);">Gokhale Education Society's · Nashik-5<br>Department of Electronics &amp; Telecommunication<br>Academic Year: 2025–26</p>
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border);">
+            <p style="font-size:13px;color:var(--ink3);">Under the guidance of<br><strong style="color:var(--ink);">Mr. P.D. Lokhande</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /intro -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 3 — RELATED WORK
+══════════════════════════════════════ -->
+<div id="related" class="page">
+  <section>
+    <div class="section-label">02 · Literature Survey</div>
+    <h2 class="section-title">14 Research Papers<br>Surveyed</h2>
+
+    <div class="papers-grid">
+      <div class="paper-card"><div class="paper-year">2024 · Huo et al.</div><h4>Learning to Recover Spectral Reflectance from RGB Images</h4><p>Dedicated CNN architecture for non-linear mapping from 3 RGB channels to 31+ spectral bands. Most direct DL solution for the RGB-to-Wavelength challenge.</p><span class="paper-badge">CNN · Deep Learning</span></div>
+      <div class="paper-card"><div class="paper-year">2025 · Bhatti et al.</div><h4>Deep Learning-based Single-Shot Computational Spectrometer</h4><p>Compact spectrometer using multilayer thin-film filters with CNN for full spectrum reconstruction from single-shot data.</p><span class="paper-badge">Custom Optical Filters · CNN</span></div>
+      <div class="paper-card"><div class="paper-year">2023 · Lan et al.</div><h4>Neural Network-Based Inverse Model for Diffuse Reflectance</h4><p>Multi-layer NN trained on diffuse reflectance spectra for complex material optical property extraction via inverse mapping.</p><span class="paper-badge">Neural Network · Inverse Model</span></div>
+      <div class="paper-card"><div class="paper-year">2025 · Rossberg et al.</div><h4>ML Applications to Diffuse Reflectance Spectroscopy</h4><p>Systematic review of ML models (SVM, NN, RF) applied to DRS for diagnostic and classification purposes.</p><span class="paper-badge">Systematic Review · ML</span></div>
+      <div class="paper-card"><div class="paper-year">2018 · Rada Deeb et al.</div><h4>Deep Spectral Reflectance &amp; Illuminant Estimation</h4><p>CNN trained on synthetic images to recover spectral properties from standard RGB camera input — directly validating the low-cost approach.</p><span class="paper-badge">CNN · RGB Camera</span></div>
+      <div class="paper-card"><div class="paper-year">2020 · Li et al.</div><h4>Spectrally-Encoded Single-Pixel Machine Vision</h4><p>DL processing of diffractive-element-encoded images for spectral reconstruction — innovative integration of compact optics and DL.</p><span class="paper-badge">Diffractive Networks · DL</span></div>
+      <div class="paper-card"><div class="paper-year">2025 · Lun et al.</div><h4>DL-Enhanced Spectroscopic Tech for Food Quality / NDT</h4><p>Review of DL architectures (CNN, RNN) applied to NDT and quality control tasks using spectral data.</p><span class="paper-badge">CNN · RNN · NDT</span></div>
+      <div class="paper-card"><div class="paper-year">2019 · Gupta et al.</div><h4>Low-Cost Webcam &amp; Diffraction Grating Spectrophotometer</h4><p>Ultra-low-cost spectrophotometer using webcam and DVD — calibrated via known atomic spectral lines. Directly validates hardware approach.</p><span class="paper-badge">Webcam · DIY Calibration</span></div>
+      <div class="paper-card"><div class="paper-year">2021 · Gao et al.</div><h4>LSTM Deep Learning for Material Classification</h4><p>LSTM network treating spectrum as a 1D time-series for advanced material classification — alternative DL architecture for spectral curves.</p><span class="paper-badge">LSTM · Reflectance</span></div>
+      <div class="paper-card"><div class="paper-year">2022 · Dyba, K.</div><h4>Reflectance Spectroscopy + ML for Material Study</h4><p>Conventional spectroscopy combined with traditional ML classifiers (Logistic Regression) — provides validated classification pipeline benchmark.</p><span class="paper-badge">Traditional ML · Spectroscopy</span></div>
+      <div class="paper-card"><div class="paper-year">2020 · Mittal et al.</div><h4>Smartphone Camera &amp; DIY Spectrometer</h4><p>Highly portable spectrometer using smartphone flash + camera with software processing GUI for field measurements.</p><span class="paper-badge">Smartphone · DIY</span></div>
+      <div class="paper-card"><div class="paper-year">2023 · He et al.</div><h4>SVM + Feature Extraction for Pigment Classification</h4><p>Feature extraction from reflectance curves (peak position, AUC) with SVM classification — validated traditional ML benchmark.</p><span class="paper-badge">SVM · Feature Extraction</span></div>
+    </div>
+
+    <div class="survey-outcomes">
+      <h3 style="color:#fff;font-size:24px;margin-bottom:32px;">Key Outcomes of Literature Survey</h3>
+      <div class="outcome-cols">
+        <div class="outcome-col">
+          <h4>Techniques Validated</h4>
+          <ul>
+            <li>CNNs &amp; LSTMs for spectral reconstruction</li>
+            <li>Diffraction grating + camera setup</li>
+            <li>RGB-to-wavelength pixel mapping</li>
+            <li>Spectral denoising via Deep CNN</li>
+            <li>Webcam-based DIY spectrometry</li>
+          </ul>
+        </div>
+        <div class="outcome-col">
+          <h4>Research Gaps Found</h4>
+          <ul>
+            <li>No end-to-end portable + GUI platform</li>
+            <li>Real-time calibration under varying settings</li>
+            <li>Offline automation without servers</li>
+            <li>Affordable solution for low-resource settings</li>
+          </ul>
+        </div>
+        <div class="outcome-col">
+          <h4>Our Contribution</h4>
+          <ul>
+            <li>Integrated low-cost optical hardware</li>
+            <li>Robust RGB → wavelength mapping</li>
+            <li>Deep Learning material classifier</li>
+            <li>Offline GUI with real-time prediction</li>
+            <li>Scalable and affordable system</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /related -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 4 — OBJECTIVES
+══════════════════════════════════════ -->
+<div id="objectives" class="page">
+  <section>
+    <div class="section-label">03 · Objectives</div>
+    <h2 class="section-title">What We Set<br>Out to Achieve</h2>
+
+    <div class="obj-list">
+      <div class="obj-item"><div class="obj-icon">🔬</div><div><h4>Low-Cost Portable Design</h4><p>Design and develop a low-cost and portable reflectance spectrophotometer using simple, readily available optical components — targeting under ₹1,500 total hardware cost.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">💡</div><div><h4>Optical Integration</h4><p>Integrate a diffraction element (grating/prism), a stable LED light source, and an HD camera module for capturing spectral images with sufficient resolution.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">🌈</div><div><h4>RGB-to-Wavelength Mapping</h4><p>Implement a robust mathematical RGB-to-wavelength mapping technique for accurate spectral curve generation across the 400–700 nm visible range.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">⚙️</div><div><h4>Image Processing Pipeline</h4><p>Apply OpenCV-based image processing techniques for extracting and refining spectral data including noise removal, normalization, and baseline correction.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">🧠</div><div><h4>Deep Learning Classifier</h4><p>Develop a CNN/Neural Network model capable of classifying materials based on their unique reflectance spectral signatures with high accuracy.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">🤖</div><div><h4>Automation</h4><p>Enable full automation in spectrum analysis — from raw image capture to material identification — reducing the need for manual data interpretation.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">🖥️</div><div><h4>Graphical User Interface</h4><p>Design a user-friendly Tkinter/PyQt GUI for spectrum visualization, dataset storage, and real-time prediction display accessible to non-expert users.</p></div></div>
+      <div class="obj-item"><div class="obj-icon">✅</div><div><h4>Non-Destructive Testing</h4><p>Achieve non-destructive, non-contact material testing capabilities suitable for industrial quality control, academic labs, and field applications.</p></div></div>
+    </div>
+
+    <div style="margin-top:48px;padding:40px;background:var(--bg2);border:1px solid var(--border);">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Hardware &amp; Software Stack</div>
+      <div class="stack-chips">
+        <div class="chip"><div class="chip-cat">Hardware</div><div class="chip-name">HD Webcam / IP Camera</div></div>
+        <div class="chip"><div class="chip-cat">Hardware</div><div class="chip-name">Diffraction Grating / Prism</div></div>
+        <div class="chip"><div class="chip-cat">Hardware</div><div class="chip-name">Arduino Nano/Uno</div></div>
+        <div class="chip"><div class="chip-cat">Hardware</div><div class="chip-name">RGB LED Light Source</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">Python 3.x</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">TensorFlow / Keras</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">OpenCV</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">NumPy / Pandas</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">Tkinter / PyQt</div></div>
+        <div class="chip"><div class="chip-cat">Software</div><div class="chip-name">SQLite / MySQL</div></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /objectives -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 5 — OUTCOMES
+══════════════════════════════════════ -->
+<div id="outcomes" class="page">
+  <section>
+    <div class="section-label">04 · Outcomes</div>
+    <h2 class="section-title">What This Project<br>Delivers</h2>
+
+    <div class="outcomes-hero">
+      <div class="outcome-metric"><span class="metric-num">₹1,250</span><span class="metric-unit">Total Hardware Cost</span><p class="metric-desc">vs. ₹50,000+ for commercial instruments</p></div>
+      <div class="outcome-metric"><span class="metric-num">300nm</span><span class="metric-unit">Spectral Range</span><p class="metric-desc">Full visible spectrum: 400nm to 700nm</p></div>
+      <div class="outcome-metric"><span class="metric-num">100%</span><span class="metric-unit">Offline Operation</span><p class="metric-desc">No internet or cloud dependency required</p></div>
+    </div>
+
+    <div class="outcomes-cards">
+      <div class="outcome-card"><div class="outcome-card-icon">🎯</div><h4>High Spectral Fidelity</h4><p>Clear differentiation of RGB LED emission peaks on metallic substrates, confirming high hardware sensitivity and solid signal-to-noise ratio.</p></div>
+      <div class="outcome-card"><div class="outcome-card-icon">🔒</div><h4>Non-Destructive Analysis</h4><p>Functional reflectance measurement pipeline — non-contact, non-destructive material assessment. Samples remain fully undamaged throughout testing.</p></div>
+      <div class="outcome-card"><div class="outcome-card-icon">📊</div><h4>Quantitative Foundation</h4><p>Converts raw spectral data into quantifiable, traceable metrics establishing a repeatable foundation for chemical or mineralogical identification.</p></div>
+      <div class="outcome-card"><div class="outcome-card-icon">🚀</div><h4>Automated Classification</h4><p>Deep Learning model trained on spectral signatures enables automated material identification — reducing human error and expert dependency significantly.</p></div>
+      <div class="outcome-card"><div class="outcome-card-icon">📱</div><h4>Portable &amp; Accessible</h4><p>Entire system fits in a small enclosure. Can be carried to field sites, small labs, and low-resource environments where commercial instruments are impractical.</p></div>
+      <div class="outcome-card"><div class="outcome-card-icon">🗄️</div><h4>Dataset Storage</h4><p>GUI with local SQLite/MySQL database for logging spectral curves and predictions — enabling dataset growth and model retraining over time.</p></div>
+    </div>
+  </section>
+</div><!-- /outcomes -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 6 — RESULTS
+══════════════════════════════════════ -->
+<div id="results" class="page">
+  <section>
+    <div class="section-label">05 · Results &amp; Discussion</div>
+    <h2 class="section-title">Phase I Results &amp;<br>Hardware Demonstration</h2>
+
+    <div class="results-grid">
+      <!-- Prototype Illustration -->
+      <div>
+        <div class="result-img-box" style="background:#1a1810;">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:16px;padding:32px;width:100%;">
+            <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:8px;">Hardware Prototype</div>
+            <div style="width:120px;height:160px;background:#2a2520;border:2px solid rgba(255,255,255,0.15);border-radius:4px;display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;padding:12px;">
+              <div style="width:90%;height:2px;background:rgba(255,255,255,0.15);border-radius:1px;"></div>
+              <div style="display:flex;gap:8px;">
+                <div style="width:16px;height:16px;background:#3080ff;border-radius:50%;box-shadow:0 0 12px #3080ff;"></div>
+                <div style="width:16px;height:16px;background:#30ff30;border-radius:50%;box-shadow:0 0 12px #30ff30;"></div>
+                <div style="width:16px;height:16px;background:#ff3030;border-radius:50%;box-shadow:0 0 12px #ff3030;"></div>
+              </div>
+              <div style="width:90%;height:2px;background:rgba(255,255,255,0.15);border-radius:1px;"></div>
+              <div style="width:40px;height:24px;background:#222;border:1px solid rgba(255,255,255,0.1);border-radius:2px;display:flex;align-items:center;justify-content:center;">
+                <div style="width:24px;height:4px;background:rgba(255,255,255,0.3);border-radius:1px;"></div>
+              </div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:12px;color:rgba(255,255,255,0.6);">Dark Chamber Enclosure</div>
+              <div style="font-size:11px;color:rgba(255,255,255,0.3);margin-top:4px;">Arduino + RGB LEDs + Camera</div>
+            </div>
+          </div>
+          <div class="result-img-label">Fig. 4.3 — Physical Setup (Dark Chamber Prototype)</div>
+        </div>
+      </div>
+
+      <!-- LED Spectrum -->
+      <div>
+        <div class="result-img-box" style="background:#090910;">
+          <div class="led-sim">
+            <div style="font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-bottom:24px;">Spectrum Dispersion Test</div>
+            <div class="led-row">
+              <div style="text-align:center;"><div class="led led-r"></div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:8px;">620nm</div></div>
+              <div style="text-align:center;"><div class="led led-g"></div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:8px;">530nm</div></div>
+              <div style="text-align:center;"><div class="led led-b"></div><div style="font-size:9px;color:rgba(255,255,255,0.3);margin-top:8px;">450nm</div></div>
+            </div>
+            <div class="spectrum-preview"></div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:12px;text-align:center;">Diffracted light captured by camera sensor</div>
+          </div>
+          <div class="result-img-label">Fig. 4.3 — RGB LED Emission + Diffraction Result</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SVG Spectral Chart -->
+    <div style="background:var(--ink);padding:40px;border-radius:2px;margin-bottom:48px;">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;">Intensity vs. Wavelength — Captured Spectrum</div>
+      <svg viewBox="0 0 800 220" style="width:100%;height:auto;">
+        <defs>
+          <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%"   stop-color="#4361ee"/>
+            <stop offset="25%"  stop-color="#06d6a0"/>
+            <stop offset="45%"  stop-color="#44cf6c"/>
+            <stop offset="60%"  stop-color="#ffd166"/>
+            <stop offset="80%"  stop-color="#ef9b20"/>
+            <stop offset="100%" stop-color="#e63946"/>
+          </linearGradient>
+        </defs>
+        <line x1="50" y1="180" x2="780" y2="180" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="50" y1="20"  x2="50"  y2="180" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+        <line x1="50" y1="140" x2="780" y2="140" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="50" y1="100" x2="780" y2="100" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4"/>
+        <line x1="50" y1="60"  x2="780" y2="60"  stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="4,4"/>
+        <text x="50"  y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">400</text>
+        <text x="180" y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">450</text>
+        <text x="310" y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">500</text>
+        <text x="440" y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">550</text>
+        <text x="575" y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">600</text>
+        <text x="690" y="198" fill="rgba(255,255,255,0.4)" font-size="11" font-family="monospace">650nm</text>
+        <text x="8" y="183" fill="rgba(255,255,255,0.3)" font-size="10" font-family="monospace">0</text>
+        <text x="8" y="143" fill="rgba(255,255,255,0.3)" font-size="10" font-family="monospace">25</text>
+        <text x="8" y="103" fill="rgba(255,255,255,0.3)" font-size="10" font-family="monospace">50</text>
+        <text x="8" y="63"  fill="rgba(255,255,255,0.3)" font-size="10" font-family="monospace">75</text>
+        <path d="M50,175 C80,170 120,130 160,65 C180,45 200,38 220,45 C250,58 280,110 320,155 C360,175 420,180 780,178" fill="none" stroke="#4361ee" stroke-width="2" opacity="0.8"/>
+        <path d="M50,178 C150,178 250,175 320,145 C360,120 380,80 410,65 C440,50 460,52 490,65 C530,85 580,140 640,168 C700,178 780,179 780,179" fill="none" stroke="#44cf6c" stroke-width="2" opacity="0.8"/>
+        <path d="M50,180 C200,180 400,178 500,172 C560,165 580,145 610,120 C640,95 660,70 690,58 C710,50 730,52 760,65 C770,70 780,78 780,80" fill="none" stroke="#e63946" stroke-width="2" opacity="0.8"/>
+        <path d="M50,180 C80,178 110,155 140,110 C170,68 200,45 230,42 C270,38 310,55 360,90 C400,118 440,135 490,145 C550,155 640,165 780,170 L780,180 Z" fill="url(#cg)" opacity="0.08"/>
+        <circle cx="590" cy="30" r="5" fill="#4361ee"/><text x="600" y="34" fill="rgba(255,255,255,0.6)" font-size="11" font-family="monospace">Blue LED</text>
+        <circle cx="660" cy="30" r="5" fill="#44cf6c"/><text x="670" y="34" fill="rgba(255,255,255,0.6)" font-size="11" font-family="monospace">Green LED</text>
+        <circle cx="735" cy="30" r="5" fill="#e63946"/><text x="745" y="34" fill="rgba(255,255,255,0.6)" font-size="11" font-family="monospace">Red</text>
+      </svg>
+    </div>
+
+    <div class="challenges-row">
+      <div class="challenge-card">
+        <h4>⚡ Challenge: LED Intensity Uniformity</h4>
+        <p>Achieving stable, consistent illumination with low-cost LEDs is difficult. Inconsistent brightness causes varying reflectance measurements, directly impacting spectral curve accuracy and DL training data quality.</p>
+        <p style="margin-top:12px;font-size:13px;font-style:italic;color:var(--ink3);">Solution: Trials with different LED configurations controlled via Arduino PWM until uniform illumination is achieved.</p>
+      </div>
+      <div class="challenge-card">
+        <h4>📐 Challenge: Camera Angle Alignment</h4>
+        <p>The exact angle between sample, diffraction element, and camera is highly sensitive. An improper angle captures only a partial spectrum, preventing full 400–700nm mapping.</p>
+        <p style="margin-top:12px;font-size:13px;font-style:italic;color:var(--ink3);">Solution: Iterative mechanical adjustment with calibration against known atomic spectral lines.</p>
+      </div>
+    </div>
+
+    <!-- Phase I Completion -->
+    <div style="margin-top:48px;padding:32px;background:var(--bg2);border:1px solid var(--border);">
+      <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Phase I Completion Status</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;">
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">Project Definition &amp; Scope</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">14-Paper Literature Survey</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">Hardware Procurement &amp; Assembly</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">Python + OpenCV Environment</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">Block Diagram &amp; Flowchart</span></div>
+        <div style="display:flex;align-items:center;gap:12px;"><span style="color:var(--spec-green);font-size:18px;">✓</span><span style="font-size:14px;">Light Dispersion Verified</span></div>
+      </div>
+    </div>
+  </section>
+</div><!-- /results -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 7 — FUTURE SCOPE
+══════════════════════════════════════ -->
+<div id="future" class="page">
+  <section>
+    <div class="section-label">06 · Future Scope</div>
+    <h2 class="section-title">Phase II &amp; Beyond:<br>The Road Ahead</h2>
+
+    <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;">
+      <div>
+        <div class="future-timeline">
+          <div class="future-item"><div class="future-phase">Phase II · Immediate</div><h4>RGB-to-Wavelength Calibration Engine</h4><p>Develop and validate the core mapping algorithm using known atomic spectral lines. Achieve reliable, repeatable calibration across different camera settings.</p></div>
+          <div class="future-item"><div class="future-phase">Phase II · Short-Term</div><h4>Deep Learning Model Training</h4><p>Collect and label a pilot dataset of 10–15 material samples. Train and validate a CNN/LSTM classifier with target accuracy above 90%.</p></div>
+          <div class="future-item"><div class="future-phase">Phase II · Short-Term</div><h4>Full GUI Integration</h4><p>Integrate the DL classifier with real-time spectral curve generation in a Tkinter/PyQt GUI. Enable one-click material prediction with confidence scores.</p></div>
+          <div class="future-item"><div class="future-phase">Phase III · Medium-Term</div><h4>Spectral Reference Library</h4><p>Build a comprehensive reference database of material spectra to enable automatic matching without retraining — expanding identifiable materials significantly.</p></div>
+          <div class="future-item"><div class="future-phase">Phase III · Long-Term</div><h4>Transfer Learning &amp; Generalization</h4><p>Apply transfer learning to adapt the classifier to new material categories with minimal additional data, improving scalability across industrial domains.</p></div>
+          <div class="future-item"><div class="future-phase">Future · Aspirational</div><h4>Smartphone Integration</h4><p>Port the system to Android/iOS, enabling truly field-deployable spectral analysis with a mobile diffraction attachment and on-device inference.</p></div>
+        </div>
+      </div>
+
+      <div>
+        <!-- Progress Bars -->
+        <div style="background:var(--bg2);padding:40px;border-radius:2px;margin-bottom:24px;">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">Technical Roadmap Progress</div>
+          <div class="progress-list">
+            <div class="progress-row"><div class="progress-dot" style="background:#44cf6c;"></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="background:#44cf6c;width:85%;"></div></div><span class="progress-label">Hardware Setup</span></div>
+            <div class="progress-row"><div class="progress-dot" style="background:#06d6a0;"></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="background:#06d6a0;width:60%;"></div></div><span class="progress-label">Wavelength Map</span></div>
+            <div class="progress-row"><div class="progress-dot" style="background:#ffd166;"></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="background:#ffd166;width:30%;"></div></div><span class="progress-label">DL Training</span></div>
+            <div class="progress-row"><div class="progress-dot" style="background:#ef9b20;"></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="background:#ef9b20;width:15%;"></div></div><span class="progress-label">GUI Integration</span></div>
+            <div class="progress-row"><div class="progress-dot" style="background:#e63946;"></div><div class="progress-bar-bg"><div class="progress-bar-fill" style="background:#e63946;width:5%;"></div></div><span class="progress-label">Field Testing</span></div>
+          </div>
+        </div>
+
+        <div class="future-apps">
+          <div class="app-card"><div class="app-icon">🏭</div><h4>Industrial QC</h4><p>Inline metal / material sorting on production lines</p></div>
+          <div class="app-card"><div class="app-icon">🌿</div><h4>Agriculture</h4><p>Soil composition and crop health monitoring</p></div>
+          <div class="app-card"><div class="app-icon">🏥</div><h4>Biomedical</h4><p>Non-invasive tissue and fluid analysis</p></div>
+          <div class="app-card"><div class="app-icon">🎓</div><h4>Education</h4><p>Affordable lab instrument for academic institutions</p></div>
+          <div class="app-card"><div class="app-icon">🌍</div><h4>Environmental</h4><p>Pollution monitoring and material sampling</p></div>
+          <div class="app-card"><div class="app-icon">🏛️</div><h4>Heritage</h4><p>Non-destructive pigment analysis of artifacts</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /future -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 8 — CONCLUSION
+══════════════════════════════════════ -->
+<div id="conclusion" class="page">
+  <section>
+    <div class="section-label">07 · Conclusion</div>
+    <h2 class="section-title">What We've Proved<br>in Phase I</h2>
+
+    <div class="conclusion-body">
+      <div>
+        <div class="conclusion-quote">
+          <p>This project successfully developed and validated a robust analytical pipeline for reflectance spectrum analysis, effectively overcoming the limitations of slow, destructive, or subjective material characterization methods.</p>
+          <footer>— Phase I Report, Section 5 · Conclusion</footer>
+        </div>
+        <div style="margin-top:32px;padding:28px;background:var(--bg2);border:1px solid var(--border);">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Core Innovation</div>
+          <p style="font-size:15px;line-height:1.7;color:var(--ink2);">Replacing expensive spectrophotometers (₹50,000+) with a ₹1,250 system using a consumer camera, diffraction grating, and a trained Deep Learning model — making spectral analysis democratically accessible.</p>
+        </div>
+      </div>
+
+      <div>
+        <ul class="achievement-list">
+          <li><div class="ach-dot"></div><div><h4>High Spectral Fidelity Demonstrated</h4><p>Clear RGB LED emission peak differentiation on metallic substrate confirms high sensitivity and solid signal-to-noise ratio.</p></div></li>
+          <li><div class="ach-dot"></div><div><h4>Non-Destructive Pipeline Established</h4><p>Functional reflectance measurement pipeline verified — non-contact, non-destructive material assessment capability confirmed.</p></div></li>
+          <li><div class="ach-dot"></div><div><h4>Quantitative Spectral Metrics</h4><p>Raw spectral data successfully converted to traceable quantitative metrics establishing a repeatable foundation.</p></div></li>
+          <li><div class="ach-dot"></div><div><h4>Phase I Execution Completed</h4><p>All 6 Phase I milestones delivered on schedule — hardware assembled, environment configured, dispersion verified.</p></div></li>
+          <li><div class="ach-dot"></div><div><h4>Clear Phase II Roadmap</h4><p>Implementation challenges identified with concrete engineering solutions planned for Phase II.</p></div></li>
+          <li><div class="ach-dot"></div><div><h4>Literature Validated</h4><p>14 research papers confirm technical feasibility; identified gaps directly addressed by proposed system design.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div><!-- /conclusion -->
+
+
+<!-- ══════════════════════════════════════
+     PAGE 9 — CONTACT
+══════════════════════════════════════ -->
+<div id="contact" class="page">
+  <section>
+    <div class="section-label">08 · Contact</div>
+    <h2 class="section-title">Meet the Team</h2>
+
+    <div class="contact-layout">
+      <div class="contact-info">
+        <h3 style="font-size:28px;margin-bottom:8px;">Project Team</h3>
+        <p style="margin-bottom:40px;">R. H. Sapat College of Engineering<br>Electronics &amp; Telecommunication Engineering · Nashik-5</p>
+
+        <div class="team-cards">
+          <div class="team-card"><div class="team-avatar">P</div><div><h4>Prince Randhir Singh</h4><p>Team Member · Electronics &amp; Telecomm</p></div></div>
+          <div class="team-card"><div class="team-avatar">H</div><div><h4>Harsh Dhansing Girase</h4><p>Team Member · Electronics &amp; Telecomm</p></div></div>
+          <div class="team-card"><div class="team-avatar">A</div><div><h4>Atharva Santosh Jadhav</h4><p>Team Member · Electronics &amp; Telecomm</p></div></div>
+        </div>
+
+        <div class="contact-phone">
+          <span class="phone-icon">📞</span>
+          <div>
+            <h4>Contact Number</h4>
+            <p style="font-size:16px;color:rgba(255,255,255,0.8);font-weight:600;margin-top:2px;">+91 97678 94567</p>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;padding:24px;border:1px solid var(--border);border-radius:2px;">
+          <div style="font-family:'Space Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;">Guide &amp; Institution</div>
+          <p style="margin-bottom:8px;"><strong>Project Guide:</strong> Mr. P.D. Lokhande</p>
+          <p style="margin-bottom:8px;"><strong>HOD:</strong> Dr. S. P. Agnihotri</p>
+          <p style="margin-bottom:8px;"><strong>Principal:</strong> Dr. S. S. Sane</p>
+          <p><strong>Institution:</strong> GES's R. H. Sapat College of Engineering, Nashik-5</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <div class="form-group"><label>Your Name</label><input type="text" id="cf-name" placeholder="Enter your name"></div>
+        <div class="form-group"><label>Email Address</label><input type="email" id="cf-email" placeholder="your@email.com"></div>
+        <div class="form-group"><label>Subject</label><input type="text" id="cf-subject" placeholder="Project query, collaboration..."></div>
+        <div class="form-group"><label>Message</label><textarea id="cf-msg" placeholder="Your message here..."></textarea></div>
+        <button class="form-submit" onclick="sendForm()">Send Message</button>
+        <div class="form-msg" id="form-msg">✓ Message sent! We'll get back to you soon.</div>
+      </div>
+    </div>
+  </section>
+</div><!-- /contact -->
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-brand">
+    <span>Reflectance Spectrophotometer</span> · Spectrum Analyzer with Deep Learning<br>
+    GES's R. H. Sapat College of Engineering · Nashik · 2025–26
+  </div>
+  <div class="footer-right">B.E. Electronics &amp; Telecomm · Phase I</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
